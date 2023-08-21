@@ -7,6 +7,8 @@ import { SharedModule } from './shared/shared.module';
 import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BannerComponent } from './components/banner/banner.component';
 import { HomeComponent } from './pages/home/home.component';
+import { AuthModule } from './components/auth/auth.module';
+
 
 
 
@@ -20,6 +22,7 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    AuthModule,
     NgbModule,
     NgbCarouselModule
   ],
