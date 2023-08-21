@@ -1,7 +1,15 @@
+.container-fluid{
+position: fixed;
+top: 0;
+z-index: 99;
+}
 .brand-name {
   color: rgb(218, 138, 19);
 }
-
+.nav-btn a{
+    text-decoration: none;
+    color: #000 !important;
+}
 .nav-btn:hover {
   background-color: #d2d2d2;
   border-radius: 50px;
