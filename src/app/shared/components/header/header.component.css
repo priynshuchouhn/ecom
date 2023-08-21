@@ -1,0 +1,50 @@
+.brand-name {
+  color: rgb(218, 138, 19);
+}
+
+.nav-btn:hover {
+  background-color: #d2d2d2;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#button-addon2 {
+  border-radius: 0px 32px 32px 0;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  z-index: 99;
+  border: 1px solid rgb(222, 226, 230);
+  border-left: none;
+}
+#button-addon2:hover{
+    background-color: rgb(222, 226, 230);
+    color: #000;
+}
+#search{
+    border-right: none;
+}
+
+#search:focus{
+    border: 1px solid #d2d2d2;
+    box-shadow: none;
+}
+
+#search:focus+#button-addon2{
+    background-color: rgb(222, 226, 230);
+    color: #000;
+}
+
+.nav-item a{
+    color: rgb(218, 138, 19);
+}
+.nav-item{
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+}
+
+.nav-item:hover{
+    border-bottom: 1px solid rgb(218, 138, 19);
+}
