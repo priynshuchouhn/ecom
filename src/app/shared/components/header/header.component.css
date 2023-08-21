@@ -40,11 +40,11 @@
 .nav-item a{
     color: rgb(218, 138, 19);
 }
-.nav-item{
-    border-bottom: 1px solid transparent;
+.nav-item.menu{
+    border-bottom: 2px solid transparent;
     cursor: pointer;
 }
 
-.nav-item:hover{
-    border-bottom: 1px solid rgb(218, 138, 19);
+.nav-item.menu:hover{
+    border-bottom: 2px solid rgb(218, 138, 19);
 }
