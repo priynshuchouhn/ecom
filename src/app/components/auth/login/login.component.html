@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-8 mx-auto">
       <div class="card">
-        <div class="card-body p-0 bg-dark-subtle">
+        <div class="card-body p-0 bg-warning-subtle">
             <div class="row">
               <div class="col-md-4">
                 <div class="bg-white p-3 pt-5 h-100">
@@ -15,22 +15,25 @@
               </div>
               <div class="col-md-8">
                 <div class="p-3 pt-5">
-                  <form>
+                  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                     <div class="form-group mb-3">
                       <label for="username" class="form-label">Mobile Number or Email</label>
-                      <input type="text" name="" id="username" class="form-control" placeholder="Enter Mobile Number/Email" aria-describedby="helpId">
+                      <input type="text" name="" id="username" class="form-control" placeholder="Enter Mobile Number/Email" formControlName="username" aria-describedby="helpId" required>
                     </div>
                     <div class="form-group mb-3">
                       <label for="password" class="form-label">Password</label>
-                      <input type="password" name="" id="password" class="form-control" placeholder="Enter Mobile Number/Email" aria-describedby="helpId">
+                      <input type="password" name="" id="password" class="form-control" placeholder="Password" formControlName="password" aria-describedby="helpId" required>
                     </div>
-                    <div class="form-group mb-5 text-center">
+                    <div class="form-group mb-4 text-center">
                         <small>By continuing, you agree to Ecom's Terms of Use and Privacy Policy.</small>
                     </div>
-                    <div class="form-group mt-3 mb-3 text-center">
-                     <button class="btn btn-ecom btn-primary w-100">Login</button>
+                    <div class="form-group mb-3 text-center">
+                     <button class="btn btn-ecom w-100" type="submit">Login</button>
                     </div>
-                    <div class="form-group mt-5 text-center">
+                    <div class="text-center mb-3">
+                      <small class="text-danger" *ngIf="errorString">Please fill the required fields before submitting</small>
+                    </div>
+                    <div class="form-group mt-5 text-center absolute">
                         <p>New to Ecom? <a routerLink="../register">Create a account</a></p>
                     </div>
                   </form>

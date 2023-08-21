@@ -1,3 +1,12 @@
 .card-body{
     min-height: 50vh;
 }
+
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+.btn-ecom{
+background-color: rgb(218, 138, 19);
+color: #fff;
+}

@@ -8,9 +8,9 @@ export class AuthService {
   constructor() { }
 
 
-  loginUser(user:{email:string, password:string}){
+  loginUser(user:{username:string, password:string}){
     if(user){
-      console.log("login");
+      console.log(user);
     }
   }
 }
