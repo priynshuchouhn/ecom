@@ -8,6 +8,9 @@ import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BannerComponent } from './components/banner/banner.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AuthModule } from './components/auth/auth.module';
+import { OfferDescCardComponent } from './components/products/offer-desc-card/offer-desc-card.component';
+import { ProductCardComponent } from './components/products/product-card/product-card.component';
+import { CategoryCardComponent } from './components/products/category-card/category-card.component';
 
 
 
@@ -17,6 +20,9 @@ import { AuthModule } from './components/auth/auth.module';
     AppComponent,
     BannerComponent,
     HomeComponent,
+    OfferDescCardComponent,
+    ProductCardComponent,
+    CategoryCardComponent,
   ],
   imports: [
     BrowserModule,

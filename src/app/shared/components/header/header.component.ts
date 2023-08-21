@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -25,7 +25,6 @@ export class HeaderComponent implements OnInit{
   }
 
   logout(){
-    console.log("clicked");
     this.auth.signOut();
     this.userLogined= false
   }

@@ -35,7 +35,6 @@ export class AuthService {
 
   loginUser(user: { username: string, password: string }) {
     const userNameType = this.validateUsername(user.username)
-    console.log(userNameType)
     if (userNameType == 'mobile') {
       if (user.username == this.tempUser.mobile_number) {
         localStorage.setItem('user', JSON.stringify(this.tempUser));
