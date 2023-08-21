@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -9,15 +10,25 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 export class HeaderComponent implements OnInit{
 
   authPage = false;
+  userLogined = false;
 
-  constructor(private route: ActivatedRoute){}
+  constructor(private route: ActivatedRoute, private auth: AuthService){}
   ngOnInit(): void {
     this.route.url.subscribe(segments => {
       const authSegment = segments.some(segment => segment.path === 'auth');
       this.authPage = authSegment
-    })  
+    });
+    const user = JSON.parse(localStorage.getItem('user')!);
+    if(user){
+      this.userLogined = true;
+    }
   }
 
+  logout(){
+    console.log("clicked");
+    this.auth.signOut();
+    this.userLogined= false
+  }
 
 
 }
