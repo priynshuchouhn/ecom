@@ -4,9 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BannerComponent } from './components/banner/banner.component';
 import { HomeComponent } from './pages/home/home.component';
+
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    NgbModule
+    NgbModule,
+    NgbCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

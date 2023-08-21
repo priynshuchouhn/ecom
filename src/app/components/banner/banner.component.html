@@ -1,1 +1,17 @@
-<p>banner works!</p>
+<ngb-carousel [interval]=6000 [showNavigationArrows]="false" [showNavigationIndicators]="false" [wrap]="true">
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img src="/assets/banner/banner-1.jpg" alt="banner-1" />
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img src="/assets/banner/banner-2.jpg" alt="banner-2" />
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+			<img src="/assets/banner/banner-3.jpg" alt="banner-3" />
+		</div>
+	</ng-template>
+</ngb-carousel>
