@@ -5,6 +5,7 @@ z-index: 99;
 }
 .brand-name {
   color: rgb(218, 138, 19);
+  cursor: pointer;
 }
 .nav-btn a{
     text-decoration: none;
