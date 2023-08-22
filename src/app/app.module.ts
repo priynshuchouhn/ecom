@@ -11,6 +11,7 @@ import { AuthModule } from './components/auth/auth.module';
 import { OfferDescCardComponent } from './components/products/offer-desc-card/offer-desc-card.component';
 import { ProductCardComponent } from './components/products/product-card/product-card.component';
 import { CategoryCardComponent } from './components/products/category-card/category-card.component';
+import { ProductCardOneComponent } from './components/products/product-card-one/product-card-one.component';
 
 
 
@@ -23,6 +24,7 @@ import { CategoryCardComponent } from './components/products/category-card/categ
     OfferDescCardComponent,
     ProductCardComponent,
     CategoryCardComponent,
+    ProductCardOneComponent,
   ],
   imports: [
     BrowserModule,
