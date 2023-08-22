@@ -1,0 +1,17 @@
+.image{
+    height: 200px;
+}
+.image img{
+    object-fit: cover;
+    object-position: top;
+}
+.card-header{
+    overflow: hidden;
+}
+
+.card:hover{
+    box-shadow: 1px 1px 10px #d2d2d2;
+    transform: scale(1.01);
+    transition: .1s all ease-in;
+    cursor: pointer;
+}

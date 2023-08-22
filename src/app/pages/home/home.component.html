@@ -10,23 +10,19 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-2">
-                <app-offer-desc-card [imagePath]="'https://i.etsystatic.com/22368382/r/il/006d21/4245808662/il_1588xN.4245808662_a3x4.jpg'" [description]="'Womens Ethnic Clothing'" [offer]="'Up to 40% off on'"></app-offer-desc-card>
+        <div class="col-md-2" *ngFor="let offerDesc of lstOfferDesc">
+                <app-offer-desc-card [imagePath]="offerDesc.imagePath" [description]="offerDesc.description" [offer]="offerDesc.offer"></app-offer-desc-card>
         </div>
-        <div class="col-md-2">
-                <app-offer-desc-card [imagePath]="'https://i.etsystatic.com/22368382/r/il/006d21/4245808662/il_1588xN.4245808662_a3x4.jpg'" [description]="'Womens Ethnic Clothing'" [offer]="'Up to 40% off on'"></app-offer-desc-card>
+    </div>
+    <div class="row my-4 py-2">
+        <div class="col-md-6">
+            <h3>Shop our top picks for you</h3>
+            <small>Curated collections hand-picked by Ecom editors</small>
         </div>
-        <div class="col-md-2">
-                <app-offer-desc-card [imagePath]="'https://i.etsystatic.com/22368382/r/il/006d21/4245808662/il_1588xN.4245808662_a3x4.jpg'" [description]="'Womens Ethnic Clothing'" [offer]="'Up to 40% off on'"></app-offer-desc-card>
-        </div>
-        <div class="col-md-2">
-                <app-offer-desc-card [imagePath]="'https://i.etsystatic.com/22368382/r/il/006d21/4245808662/il_1588xN.4245808662_a3x4.jpg'" [description]="'Womens Ethnic Clothing'" [offer]="'Up to 40% off on'"></app-offer-desc-card>
-        </div>
-        <div class="col-md-2">
-                <app-offer-desc-card [imagePath]="'https://i.etsystatic.com/22368382/r/il/006d21/4245808662/il_1588xN.4245808662_a3x4.jpg'" [description]="'Womens Ethnic Clothing'" [offer]="'Up to 40% off on'"></app-offer-desc-card>
-        </div>
-        <div class="col-md-2">
-                <app-offer-desc-card [imagePath]="'https://i.etsystatic.com/22368382/r/il/006d21/4245808662/il_1588xN.4245808662_a3x4.jpg'" [description]="'Womens Ethnic Clothing'" [offer]="'Up to 40% off on'"></app-offer-desc-card>
+    </div>
+    <div class="row gap-5">
+        <div class="col-md-2" *ngFor="let categoryCard of lstCategoryCard">
+                <app-category-card [imagePath]="categoryCard.imagePath" [description]="categoryCard.description"></app-category-card>
         </div>
     </div>
 </div>
