@@ -1,0 +1,28 @@
+.card{
+    overflow: hidden;
+    border:none;
+    border-radius: 1px;
+}
+.card-header{
+    border: none;
+    background: transparent;
+}
+
+*{
+    font-size: 13px;
+}
+small{
+    font-size: 10px;
+}
+
+.badge{
+    padding: 5px;
+    border-radius: 2px;
+}
+.badge-success{
+    background-color: #388e3c;
+}
+.card:hover{
+    box-shadow: 1px 1px 12px #d2d2d2;
+    transform: scale(1.01);
+}

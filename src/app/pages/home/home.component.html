@@ -1,90 +1,127 @@
 <app-header></app-header>
 <app-banner></app-banner>
 <div class="container p-3">
-  <div class="row mt-4 py-2">
-    <div class="col-md-6">
-      <h3>Deals of the day</h3>
+
+  <!-- Deals of the Day -->
+
+  <section>
+    <div class="row mt-4 py-2">
+      <div class="col-md-6">
+        <h3>Deals of the day</h3>
+      </div>
+      <div class="col-md-6 text-end">
+        <p>Show all deals</p>
+      </div>
     </div>
-    <div class="col-md-6 text-end">
-      <p>Show all deals</p>
+    <div class="row">
+      <div class="col-md-2" *ngFor="let offerDesc of lstOfferDesc">
+        <app-offer-desc-card
+          [imagePath]="offerDesc.imagePath"
+          [description]="offerDesc.description"
+          [offer]="offerDesc.offer"
+        ></app-offer-desc-card>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-2" *ngFor="let offerDesc of lstOfferDesc">
-      <app-offer-desc-card
-        [imagePath]="offerDesc.imagePath"
-        [description]="offerDesc.description"
-        [offer]="offerDesc.offer"
-      ></app-offer-desc-card>
+  </section>
+
+  <!-- End Deals of the Day -->
+
+  <section>
+    <div class="row mt-4 py-2">
+      <div class="col-md-6">
+        <h3>Trending Products</h3>
+      </div>
+      <div class="col-md-6 text-end">
+        <p>Show all products</p>
+      </div>
     </div>
-  </div>
-  <div class="row py-5">
-    <div class="col-md-12">
-      <div class="card card-body p-0">
-        <div class="outer-grid">
-          <div class="grid-col-1">
-            <div class="inner-grid">
-              <div class="grid-row-1-col-1 px-5 d-flex align-items-center">
-                <div>
-                  <small class="mb-5">Editors' Picks</small>
-                  <h4 class="mt-2">Everyday inspiration</h4>
-                  <button class="btn btn-outline-dark my-2">
-                    See more Editors' Picks
-                  </button>
+    <div class="row">
+      <div class="col" *ngFor="let categoryCard of lstCategoryCard">
+        <app-product-card></app-product-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editor's Pick -->
+  <section>
+    <div class="row py-5">
+      <div class="col-md-12">
+        <div class="card card-body p-0">
+          <div class="outer-grid">
+            <div class="grid-col-1">
+              <div class="inner-grid">
+                <div class="grid-row-1-col-1 px-5 d-flex align-items-center">
+                  <div>
+                    <small class="mb-5">Editors' Picks</small>
+                    <h4 class="mt-2">Everyday inspiration</h4>
+                    <button class="btn btn-outline-dark my-2">
+                      See more Editors' Picks
+                    </button>
+                  </div>
                 </div>
-              </div>
-              <div class="grid-row-1-col-2 p-4">
-                <div class="row">
-                  <div class="col-6">
-                    <app-product-card-one></app-product-card-one>
-                  </div>
-                  <div class="col-6">
-                    <app-product-card-one></app-product-card-one>
+                <div class="grid-row-1-col-2 p-4">
+                  <div class="row">
+                    <div class="col-6">
+                      <app-product-card-one></app-product-card-one>
+                    </div>
+                    <div class="col-6">
+                      <app-product-card-one></app-product-card-one>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="grid-row-2-col-1 p-4">
-                <div class="row">
-                  <div class="col-3">
-                    <app-product-card-one></app-product-card-one>
-                  </div>
-                  <div class="col-3">
-                    <app-product-card-one></app-product-card-one>
-                  </div>
-                  <div class="col-3">
-                    <app-product-card-one></app-product-card-one>
-                  </div>
-                  <div class="col-3">
-                    <app-product-card-one></app-product-card-one>
+                <div class="grid-row-2-col-1 p-4">
+                  <div class="row">
+                    <div class="col-3">
+                      <app-product-card-one></app-product-card-one>
+                    </div>
+                    <div class="col-3">
+                      <app-product-card-one></app-product-card-one>
+                    </div>
+                    <div class="col-3">
+                      <app-product-card-one></app-product-card-one>
+                    </div>
+                    <div class="col-3">
+                      <app-product-card-one></app-product-card-one>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="grid-col-2">
-            <img
-              src="https://i.etsystatic.com/18899984/r/il/9339f4/3073266925/il_794xN.3073266925_m4yi.jpg"
-              alt=""
-              class="img-fluid h-100"
-            />
+            <div class="grid-col-2">
+              <img
+                src="https://i.etsystatic.com/18899984/r/il/9339f4/3073266925/il_794xN.3073266925_m4yi.jpg"
+                alt=""
+                class="img-fluid h-100"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row my-4 py-2">
-    <div class="col-md-6">
-      <h3>Shop our top picks for you</h3>
-      <small>Curated collections hand-picked by Ecom editors</small>
+  </section>
+
+  <!-- End Editor's Pick -->
+
+  <!-- Top Category -->
+
+  <section>
+    <div class="row my-4 py-2">
+      <div class="col-md-6">
+        <h3>Shop our top picks for you</h3>
+        <small>Curated collections hand-picked by Ecom editors</small>
+      </div>
     </div>
-  </div>
-  <div class="row gap-5">
-    <div class="col-md-2" *ngFor="let categoryCard of lstCategoryCard">
-      <app-category-card
-        [imagePath]="categoryCard.imagePath"
-        [description]="categoryCard.description"
-      ></app-category-card>
-    </div>
-  </div>
+    <div class="row">
+      <div class="col" *ngFor="let categoryCard of lstCategoryCard">
+        <app-category-card
+          [imagePath]="categoryCard.imagePath"
+          [description]="categoryCard.description"
+        ></app-category-card>
+      </div>
+    </div>    
+  </section>
+
+
+  <!-- End Category -->
 </div>
 <app-footer />
