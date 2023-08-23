@@ -16,6 +16,8 @@ import { ProductDetailComponent } from './pages/product/product-detail/product-d
 import { ProductListingComponent } from './pages/product/product-listing/product-listing.component';
 import { ProductComponent } from './pages/product/product.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { ProductCheckoutItemComponent } from './components/products/product-checkout-item/product-checkout-item.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -33,11 +35,13 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
     ProductListingComponent,
     ProductComponent,
     CheckoutComponent,
+    ProductCheckoutItemComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    FormsModule,
     AuthModule,
     NgbModule,
     NgbCarouselModule

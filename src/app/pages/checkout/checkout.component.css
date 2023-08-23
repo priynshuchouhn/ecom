@@ -6,6 +6,6 @@
     background-color: transparent;
 }
 .border-top-ecom{
-    border-top: 1px solid #777;
-    border-bottom:none;
+    border-top: 1px dashed #777;
+    border-bottom: 1px dashed #777;
 }

@@ -1,0 +1,14 @@
+.button{
+    font-weight: 600;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.button:hover{
+    color: #198754;
+}
+
+.form-control-small{
+min-height: 20px !important;
+width: 20%;
+border: 1px solid black;
+}

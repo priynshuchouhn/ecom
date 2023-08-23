@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-2">
+        <img src="https://rukminim2.flixcart.com/image/832/832/jzog9e80/rakhi-set/m/z/e/rak73480-sukkhi-original-imafjndgmxzttyjf.jpeg?q=70" alt="" class="img-fluid" />
+    </div>
+    <div class="col-md-10">
+        <div class="title"><p>Sukkhi Elegant Kundan Rakhi, Chawal Roli Pack, Greeting..</p></div>
+        <div class="description text-muted"><small>1 Rakhi, Greeting Card, Roli, Chawal</small></div>
+        <div class="seller text-muted"><small>Seller:SukkhiFashionJewellery</small></div>
+        <div class="price mt-3">₹119</div>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-dark btn-sm" (click)="increament()">+</button>
+                    <input type="text" class="form-control form-control-small text-center" [(ngModel)]="quantity" readonly>
+                    <button class="btn btn-outline-dark btn-sm" (click)="decrement()" [disabled]="quantity <= 0">-</button>
+                </div>
+            </div>
+            <div class="col-md-8 text-end">
+                <span class="button"><a>SAVE FOR LATER </a></span>
+                <span class="button"><a>REMOVE</a></span>
+            </div>
+        </div>
+    </div>
+</div>
