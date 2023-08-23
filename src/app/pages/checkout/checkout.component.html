@@ -1,50 +1,59 @@
 <app-header></app-header>
-<div class="container p-3">
+<div [ngSwitch]="section">
+<section  *ngSwitchCase = "'cart'">
+  <div class="container p-3">
     <div class="row">
-        <div class="col-md-9">
-            <div class="card">
-                <div class="card-body">
-                    <app-product-checkout-item></app-product-checkout-item>
-                </div>
-                <div class="card-footer bg-white">
-                    <div class="row">
-                        <div class="col-md-12 text-end">
-                            <button class="btn btn-success">Place Order</button>
-                        </div>
-                    </div>
-                </div>
+      <div class="col-md-9">
+        <div class="card">
+          <div class="card-body">
+            <app-product-checkout-item></app-product-checkout-item>
+          </div>
+          <div class="card-footer bg-white">
+            <div class="row">
+              <div class="col-md-12 text-end">
+                <button class="btn btn-success" (click)="onPlaceOrder()">Place Order</button>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="col-md-3">
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="text-secondary mb-0">Price Detail</h4>
-                </div>
-                <div class="card-body">
-                    <table [cellPadding]="10" width="100%">
-                        <tr>
-                            <td>Price (1 item)</td>
-                            <td class="text-end">₹498</td>
-                        </tr>
-                        <tr>
-                            <td>Discount</td>
-                            <td class="text-end text-success">- ₹379</td>
-                        </tr>
-                        <tr>
-                            <td>Delivery Charges</td>
-                            <td class="text-end text-success">Free</td>
-                        </tr>
-                        <tr class="border-top-ecom">
-                            <td><strong>Total Amount</strong></td>
-                            <td class="text-end"><strong>₹119</strong></td>
-                        </tr>
-                        <tr>
-                            <td class="text-success" colspan="2">You will save ₹379 on this order</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="text-secondary mb-0">Price Detail</h4>
+          </div>
+          <div class="card-body">
+            <table [cellPadding]="10" width="100%">
+              <tr>
+                <td>Price (1 item)</td>
+                <td class="text-end">₹498</td>
+              </tr>
+              <tr>
+                <td>Discount</td>
+                <td class="text-end text-success">- ₹379</td>
+              </tr>
+              <tr>
+                <td>Delivery Charges</td>
+                <td class="text-end text-success">Free</td>
+              </tr>
+              <tr class="border-top-ecom">
+                <td><strong>Total Amount</strong></td>
+                <td class="text-end"><strong>₹119</strong></td>
+              </tr>
+              <tr>
+                <td class="text-success" colspan="2">
+                  You will save ₹379 on this order
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+</section>
+<section *ngSwitchCase="'delivery'">
+
+</section>
 </div>
 <app-footer></app-footer>
