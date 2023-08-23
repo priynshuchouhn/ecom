@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { User } from '../models/user.model';
 import { Subject } from 'rxjs';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class AuthService {
 
   errorMessage = new Subject<string>();
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private location: Location) { }
 
   tempUser: User = {
     user_id: 1,
@@ -40,6 +41,8 @@ export class AuthService {
         localStorage.setItem('user', JSON.stringify(this.tempUser));
         JSON.parse(localStorage.getItem('user')!);
         this.router.navigate(['']);
+        // this.router.navigate(['/previous-route']);
+        this.location.historyGo(-2);
       } else {
         this.errorMessage.next("invalid Login Credantials")
       }
@@ -58,6 +61,6 @@ export class AuthService {
   signOut() {
     localStorage.clear();
     localStorage.removeItem('user');
-    this.router.navigate(['']);
+    // this.router.navigate(['']);
   }
 }

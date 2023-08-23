@@ -26,3 +26,6 @@ small{
     box-shadow: 1px 1px 12px #d2d2d2;
     transform: scale(1.01);
 }
+a{
+    text-decoration: none;
+}

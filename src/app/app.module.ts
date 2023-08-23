@@ -12,6 +12,9 @@ import { OfferDescCardComponent } from './components/products/offer-desc-card/of
 import { ProductCardComponent } from './components/products/product-card/product-card.component';
 import { CategoryCardComponent } from './components/products/category-card/category-card.component';
 import { ProductCardOneComponent } from './components/products/product-card-one/product-card-one.component';
+import { ProductDetailComponent } from './pages/product/product-detail/product-detail.component';
+import { ProductListingComponent } from './pages/product/product-listing/product-listing.component';
+import { ProductComponent } from './pages/product/product.component';
 
 
 
@@ -25,6 +28,9 @@ import { ProductCardOneComponent } from './components/products/product-card-one/
     ProductCardComponent,
     CategoryCardComponent,
     ProductCardOneComponent,
+    ProductDetailComponent,
+    ProductListingComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
