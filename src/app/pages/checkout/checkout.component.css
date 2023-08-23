@@ -1,0 +1,11 @@
+.card{
+    border-radius: 2px;
+    border:none
+}
+.card-header{
+    background-color: transparent;
+}
+.border-top-ecom{
+    border-top: 1px solid #777;
+    border-bottom:none;
+}

@@ -15,6 +15,7 @@ import { ProductCardOneComponent } from './components/products/product-card-one/
 import { ProductDetailComponent } from './pages/product/product-detail/product-detail.component';
 import { ProductListingComponent } from './pages/product/product-listing/product-listing.component';
 import { ProductComponent } from './pages/product/product.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 
 
@@ -31,6 +32,7 @@ import { ProductComponent } from './pages/product/product.component';
     ProductDetailComponent,
     ProductListingComponent,
     ProductComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
