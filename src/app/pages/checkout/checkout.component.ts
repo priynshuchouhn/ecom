@@ -29,6 +29,10 @@ export class CheckoutComponent implements OnInit, OnDestroy {
     }
   }
 
+  onDeliverHere(){
+    this.section = 'payment';
+  }
+
 
 
 

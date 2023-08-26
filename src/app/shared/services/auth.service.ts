@@ -40,9 +40,9 @@ export class AuthService {
       if (user.username == this.tempUser.mobile_number) {
         localStorage.setItem('user', JSON.stringify(this.tempUser));
         JSON.parse(localStorage.getItem('user')!);
-        this.router.navigate(['']);
+        // this.router.navigate(['']);
         // this.router.navigate(['/previous-route']);
-        this.location.historyGo(-2);
+        this.location.historyGo(-1);
       } else {
         this.errorMessage.next("invalid Login Credantials")
       }

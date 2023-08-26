@@ -18,6 +18,7 @@ import { ProductComponent } from './pages/product/product.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { ProductCheckoutItemComponent } from './components/products/product-checkout-item/product-checkout-item.component';
 import { FormsModule } from '@angular/forms';
+import { DeliveryAddressComponent } from './components/account/delivery-address/delivery-address.component';
 
 
 
@@ -36,6 +37,7 @@ import { FormsModule } from '@angular/forms';
     ProductComponent,
     CheckoutComponent,
     ProductCheckoutItemComponent,
+    DeliveryAddressComponent,
   ],
   imports: [
     BrowserModule,
