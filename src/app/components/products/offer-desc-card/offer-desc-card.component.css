@@ -15,3 +15,15 @@
     transition: .1s all ease-in;
     cursor: pointer;
 }
+.card-body{
+    background-color: #fff;
+}
+
+
+.card:hover .card-body{
+    z-index: 2;
+    transform: translateY(-1rem);
+    transition: all .3s;
+}
+
+
